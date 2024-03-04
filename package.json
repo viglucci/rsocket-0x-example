@@ -1,0 +1,25 @@
+{
+  "name": "rsocket-0x-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viglucci/rsocket-0x-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viglucci/rsocket-0x-example/issues"
+  },
+  "homepage": "https://github.com/viglucci/rsocket-0x-example#readme",
+  "dependencies": {
+    "rsocket-core": "^0.0.27",
+    "rsocket-websocket-client": "^0.0.27",
+    "rsocket-websocket-server": "^0.0.27",
+    "ws": "^8.16.0"
+  }
+}

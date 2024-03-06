@@ -41,14 +41,18 @@ const getRequestHandler = (requestingRSocket, setupPayload) => {
           return;
         }
 
+        // simulated failure on even requests
+        if (counter++ % 2 === 0) {
+          const error = new RSocketError(1234, 'Custom Error');
+          // const error = new Error('My Error');
+          subscriber.onError(error);
+          console.log(`Simulating failure:`, error.toString());
+          return;
+        }
+
         const msg = `${new Date()}`;
         console.log(`requestResponse response`, msg);
         try {
-          if (counter++ % 2 === 0) {
-            const error = new RSocketError(1234, 'Custom Error');
-            // const error = new Error('My Error');
-            throw error;
-          }
           subscriber.onComplete({
             data: msg,
             metadata: null, // or new Buffer(...)

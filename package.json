@@ -8,7 +8,8 @@
     "websocket-simple-server": "node src/websocket-simple/server.js",
     "websocket-simple-client": "node src/websocket-simple/client.js",
     "tcp-simple-server": "node src/tcp-simple/server.js",
-    "tcp-simple-client": "node src/tcp-simple/client.js"
+    "tcp-simple-client": "node src/tcp-simple/client.js",
+    "tcp-erroring-server": "node src/tcp-custom-error/server.js"
   },
   "repository": {
     "type": "git",
